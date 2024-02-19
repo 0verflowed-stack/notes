@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    --text-color: #000000;
+    --inverted-text-color: #000000;
+    --background-color: #ffffff;
+    --header-background: rgb(136, 155, 172);
+
+    .contentWrapper {
+        padding-top: 20px;
+        height: calc(100% - 162px);
+        overflow-y: scroll;
+        background-color: #ece1e1;
+    }
+}
+
+body.dark {
+    --text-color: #312e2e;
+    --inverted-text-color: #ffffff;
+    --background-color: #ffffff;
+    --header-background: rgb(71, 97, 121);
+}

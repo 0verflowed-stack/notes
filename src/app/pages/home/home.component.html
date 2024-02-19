@@ -1,0 +1,16 @@
+<div class="contentWrapper">
+    <div class="searchBar">
+        <label for="notesFilter">Filter notes:</label>
+        <input type="text" placeholder="Filter" name="notesFilter" id="notesFilter" (input)="filter($event)">
+    </div>
+    <button class="addBtn" routerLink="/new">Add note</button>
+    <div class="notesList">
+        <app-note-card
+            *ngFor="let note of filteredNotes; index as i"
+            [link]="i"
+            [title]="note.title"
+            [body]="note.body"
+            (delete)="deleteNote(i)"
+        ></app-note-card>
+    </div>
+</div>

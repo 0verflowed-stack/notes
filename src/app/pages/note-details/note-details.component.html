@@ -1,0 +1,16 @@
+<div class="form-container contentWrapper">
+    <form #noteForm="ngForm" (ngSubmit)="onSubmit(noteForm)">
+        <div class="field">
+            <label for="title" class="label">Title</label>
+            <input name="title" required id="title" [ngModel]="note.title" />
+        </div>
+        <div class="field">
+            <label for="body" class="label">Body</label>
+            <textarea name="body" id="body" [ngModel]="note.body"></textarea>
+        </div>
+        <div>
+            <button type="button" (click)="cancel()" >Cancel</button>
+            <button type="submit" [disabled]="!noteForm.valid">Save</button>
+        </div>
+    </form>
+</div>

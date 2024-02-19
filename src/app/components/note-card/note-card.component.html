@@ -1,0 +1,14 @@
+<div #container class="noteCardContainer">
+    <a class="noteCardContentWrapper" [routerLink]="['/', link]">
+        <div class="noteCardContent">
+            <h1 class="noteCardTitle">{{title}}</h1>
+            <div #bodyText class="noteCardBody">
+                <p>{{body}}</p>
+                <div #truncator class="fade-out-trancation"></div>
+            </div>
+        </div>
+    </a>
+    <div class="xButton" (click)="delete()">
+        X
+    </div>
+</div>

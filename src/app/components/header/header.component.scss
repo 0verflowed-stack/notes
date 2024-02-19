@@ -1,0 +1,43 @@
+
+header {
+    background-color: var(--header-background);
+    padding: 10px 20px;
+    height: 70px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+
+    .navList {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        gap: 20px;
+        font-size: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+
+        .navListItem {
+            .navListItemBtn {
+                background-color: transparent;
+                color: var(--inverted-text-color);
+                border: none;
+                border-radius: 10px;
+                font-size: 25px;
+                padding: 10px 20px;
+            }
+            &:hover {
+                background-color: rgb(41, 49, 172);
+                cursor: pointer;
+            }
+        }
+    }
+    .themeBtn {
+        background-color: transparent;
+        border: none;
+        &:hover {
+            cursor: pointer;
+        }
+        img {
+            width: 30px;
+        }
+    }
+}
